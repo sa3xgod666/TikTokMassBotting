@@ -84,15 +84,14 @@ def SendView(item_id, proxy, timeout, proxytype):
             if (req.json()["status_code"] == 0):
                 TotalFailedReq += 1
                 if DebugMode == True:
-                    print(Colorate.Horizontal(Colors.red_to_white, f"Fail : {TotalFailedReq}"))
+                    pass
                 else:
-                    Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+                    pass
             else:
                 pass
         except:
-            TotalSendedView += 1
-            print(Colorate.Horizontal(Colors.green_to_white, f"Sended View/Share: {TotalSendedView}"))
-            Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+            pass
+            
     except:
         pass
 
@@ -104,26 +103,13 @@ def ClearURI(link):
 
 if (__name__ == "__main__"):
     Clear()
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    itemID       = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
-    amount       = Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001)
+    itemID       = "https://www.tiktok.com/@romancev768/video/7088263554385726722?is_copy_url=1&is_from_webapp=v1"
+    amount       = 0
     
-    Proxytype    = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
-    Timeout      = Write.Input("Proxy Timeout > ", Colors.red_to_purple, interval=0.0001)
-    NThread      = Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001)
+    Proxytype    = "https"
+    Timeout      = 1000
+    NThread      = 1000000000000000000000000000000
     
-    if Title("Proy Scrapper X-Proxy by NightFallGT") == True:
-        Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_purple, interval=0.0001)
-        if Debug.lower().startswith("y"):
-            DebugMode = True
-        else:
-            DebugMode = False
-
-
     itemID = ClearURI(itemID)
 
     ProxyChoose = True
