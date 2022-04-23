@@ -82,7 +82,7 @@ def ClearURI(link):
 
 if (__name__ == "__main__"):
     Clear()
-    itemID       = "https://www.tiktok.com/@romancev768/video/7088684784083324162?is_copy_url=1&is_from_webapp=v1"
+    itemID       = "https://www.tiktok.com/@noterdaam_nord/video/7089688018092625157?is_copy_url=1&is_from_webapp=v1&lang=ru-RU1"
     amount       = 0
     NThread      = 1000000000000000000000000000
     
